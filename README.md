@@ -3,8 +3,7 @@
 ## Steps to uninstall
 
 1. Remove VM extensions
-2. Disconnect the server from Azure Arc
-3. Uninstall the Windows agent
+2. Disconnect the server from Azure Arc and Uninstall the agent
 
 ## Pre-requisites
 
@@ -21,7 +20,7 @@
 Set-AzContext -Subscription "xxxx-xxxx-xxxx-xxxx"
 ```
 
-### Remove VM extensions
+### 1. Remove VM extensions
 
 >NOTE
 > This script should run on a management machine or in Azure Cloud Shell
@@ -52,7 +51,7 @@ Get-AzConnectedMachine -SubscriptionId $subscriptionId | ForEach-Object{
 }
 ```
 
-### Disconnect the server from Azure Arc and uninstall agent
+### 2. Disconnect the server from Azure Arc and uninstall agent
 
 >NOTE
 > This script should run on the Arc-enabled Servers to be disconnected
